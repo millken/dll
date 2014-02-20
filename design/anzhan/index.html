@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>站长工具-站长查询-百度排名-百度权重查询-SEO工具-爱站网</title>
+<meta name="keywords" content="网站收录查询,站长查询,百度排名,百度权重查询,关键词排名查询,百度收录查询" />
+<meta name="description" content="爱站网提供网站收录查询和站长查询以及百度权重值查询等多个站长工具，免费查询各种工具，包括有关键词排名查询，百度收录查询等。" />
+<link href="http://static.aizhan.com/css/css-2.6.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://static.aizhan.com/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://static.aizhan.com/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://static.aizhan.com/js/history-1.2.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://static.aizhan.com/js/DD_belatedPNG.js"></script>
+<script>
+  DD_belatedPNG.fix('.logo img,.t1,.hd span');
+</script>
+<![endif]-->
+<style type="text/css">
+/**首页2013.12.05**/
+.box_01 { margin:5px 0 12px 0;height:318px;border:solid 1px #eee}
+.box_01 .hd { display:none;height:40px;background:url(http://static.aizhan.com/images/2013/bg_index1.png) no-repeat}
+.box_01 .hd h3 { padding-left:24px}
+.box_01 .bd { padding:70px 0;text-align:center}
+.box_01 .bd .pl{padding:3px 2px 18px 300px;/*267*/}
+.box_01 .bd .f12 { display:none;padding:2px 0 0 10px;line-height:18px}
+
+.hd h3 { padding-left:16px;line-height:40px;font-size:112.5%;font-weight:100;color:#fff}
+.hd span { float:right;height:40px;padding:0 28px 0 0;background:url(http://static.aizhan.com/images/2013/ico_more.png) no-repeat 35px 17px}
+.hd span a { line-height:40px;font-size:87.5%;color:#fff}
+.hd span a:hover { color:#eee}
+.bd h3 { height:32px;line-height:32px;font-size:112.5%;font-weight:700;overflow:hidden}
+
+.input_d {height:38px;line-height:38px}
+.input_d .input_02 {height:36px;line-height:36px;}
+.input_d .j_ico {position:absolute;top:0;padding:0;width:36px;height:36px;}
+.input_d .j_ico a {width:36px;height:36px;}
+.input_d .classlist {top:37px;z-index:9;}
+.input_d .classlist li {font-size:87.5%}
+
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="top">
+    <div class="r user">
+      <div id="user1" class="t1"></div>
+      <div id="user2" style="display:none">
+      <script type="text/javascript">
+	  if ($.cookie('userName')) {
+		  document.write('<div class="t2">欢迎您 <b>'+$.cookie('userName')+'</b> <a href="http://www.aizhan.com/user.php">用户中心</a> | <a href="http://www.aizhan.com/logout.php">退出</a></div>');
+	  } else {
+		  document.write('<div class="t2"><a href="http://www.aizhan.com/login.php">用户登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.aizhan.com/reg.php">快速注册</a></div>');
+	  }
+	  </script>
+      </div>
+    </div>
+    <div class="r word"><a href="http://www.aizhan.com/baidu/newword" class="white" target="_blank">提交新词</a></div>
+    <div class="r rss">
+      <div id="rss1" class="t1">订阅</div>
+      <div id="rss2" style="display:none">        
+        <div class="t2"><script type="text/javascript">document.write('<a title="百度站长工具" href="http://zhanzhang.baidu.com/dashboard/index" target="_blank" rel="nofollow">站长工具</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.aizhan.com/ie_baidu.html" target="_blank">右键查询</a>');</script></div>
+        <div class="t2"><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.aizhan.com/');" href="#" target=_self>设为首页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a title="加入收藏" href="javascript:window.external.AddFavorite('http://www.aizhan.com/', '爱站网')">收藏本站</a></div>
+        <div class="topweibo">
+          <wb:follow-button uid="1768367371" type="red_2" width="136" height="24" ></wb:follow-button>
+        </div>
+      </div>
+    </div>
+    <div class="logo"><a href="http://www.aizhan.com"><img src="http://static.aizhan.com/images/2013/logo.png" width="100" height="36" /></a></div>
+    <div id="nav" class="nav"> <a class="s0 on" href="http://www.aizhan.com" hidefocus="true">首 页</a> <a class="s1" href="http://www.aizhan.com/siteall" hidefocus="true">SEO综合查询</a> <a class="s2" hidefocus="true">域名/IP类查询</a> <a class="s3" href="http://tools.aizhan.com" hidefocus="true">工具聚合</a> <a class="s4" href="http://weibo.aizhan.com" hidefocus="true" style="display:none">站长博客</a></div>
+  </div>
+  <div id="subnav"></div>
+</div>
+<!--a1-->
+<div class="content">
+  <div class="box_01">
+    <div class="hd">
+      <h3>查询</h3>
+    </div>
+    <div class="bd">
+      <form action="http://www.aizhan.com/siteall/" method="post" name="query_form" id="query_form" onsubmit="return doquery('enter');">
+        <div class="clearfix">
+        <div class="l pl"><img align="absmiddle" src="http://static.aizhan.com/images/logo02.png" /></div>
+        <div class="l input_d">
+          <input type="text" name="site" id="site" class="input_02" size="40" autocomplete="off" onClick="DisplayAllSitesBox();" value="" />
+          <span class="j_ico"><a onClick="DisplayAllSitesBox();"></a></span>
+          <div id="allSitesBoxHdl" style="display:none" class="classlist">
+            <ul id="allSitesBox">
+            </ul>
+          </div>
+        </div>
+        <div class="l f12"><span class="blue">提示：</span>请输入你要查询的地址<br/>然后选择下面你要查询的功能</div>
+        </div>
+        <div>
+          <input type="button" class="btn02" onclick="doquery('siteall')" value="综合查询" />
+          <input type="button" class="btn02" onclick="doquery('baidu')" value="百度排名" />
+          <input type="button" class="btn02" onclick="doquery('linkche')" value="友情链接检测" />
+          <input type="button" class="btn02" onclick="doquery('link')" value="网站反链" />
+          <input type="button" class="btn02" onclick="doquery('whois')" value="Whois查询" />
+          <input type="button" class="btn02" onclick="doquery('dns')" value="IP反查域名" />
+          <input type="button" class="btn02" onclick="doquery('icp')" value="网站备案查询" />
+          <input type="button" class="btn02" onclick="doquery('ping')" value="PING检测" />
+        </div>
+      </form>
+      <script type="text/javascript">FillAllSites();</script> 
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="top">
+    <div class="r"><a href="http://www.aizhan.com/tag/">相关站点</a><a href="http://ping.aizhan.com/">PING检测</a><a href="http://dns.aizhan.com/">IP反查域名</a><a href="http://whois.aizhan.com/">whois查询</a><a class="last" href="http://whois.aizhan.com/reverse-whois/">whois反查</a>
+    </div>
+    <div class="l"><a class="first" href="http://www.aizhan.com/siteall/">综合查询</a><a href="http://baidurank.aizhan.com/baidu/">百度排名</a><a href="http://linkche.aizhan.com/">友链接测</a><a href="http://link.aizhan.com/">网站反链</a><a href="http://lishi.aizhan.com/">历史数据</a><a href="http://tools.aizhan.com/pk/">网站PK</a><a href="http://www.aizhan.com/webscan/">安全检测</a><a href="http://ci.aizhan.com/">关键词挖掘</a><a href="http://pr.aizhan.com/">PR值查询</a><a class="last" href="http://icp.aizhan.com/">备案查询</a>
+    </div>
+  </div>
+  <div class="bot">
+    <div class="r"><a class="first" rel="nofollow" href="http://www.aizhan.com/about.html">公司简介</a><a rel="nofollow" href="http://www.aizhan.com/contact.html">联系方法</a><a href="http://seo.aizhan.com" target="_blank" id="toseo">SEO培训</a><a rel="nofollow" href="http://www.aizhan.com/job.html">招聘信息</a><a rel="nofollow" href="http://www.aizhan.com/copyright.html">版权声明</a><a rel="nofollow" href="http://www.aizhan.com/ad.html">广告服务</a><a href="http://www.aizhan.com/flinks.html">友情链接</a><a rel="nofollow" href="http://www.aizhan.com/help.html">帮助中心</a><a class="last" rel="nofollow" href="http://post.aizhan.com/bug">意见反馈</a></div>
+    <div class="l"><span>&copy;</span>2009-2013 爱站网 版权所有  About Aizhan <a class="icp" rel="nofollow" href="http://www.miibeian.gov.cn">粤ICP备11096607号-15</a></div>
+  </div>  
+</div>
+<script type="text/javascript" src="http://static.aizhan.com/js/home2013.js"></script> 
+<script type="text/javascript">
+var lastSite = null;
+var defaultSite = '';
+//初始化数据
+var allSites = $.cookie('allSites');
+var defaultSiteState = $.cookie('defaultSiteState');
+
+if (!allSites){
+	if (!defaultSiteState) {
+		allSites = defaultSite+',1';
+		
+		$.cookie('defaultSiteState', 1, {path: '/', domain: '.aizhan.com'});
+		$.cookie('allSites', allSites, {path: '/', domain: '.aizhan.com'});
+	}
+
+	lastSite = defaultSite;
+} else {
+	if (!defaultSiteState && allSites.indexOf(defaultSite) < 0) {
+		allSites = defaultSite+',1|'+allSites;
+		lastSite = defaultSite;
+		
+		$.cookie('defaultSiteState', 1, {path: '/', domain: '.aizhan.com'});
+		$.cookie('allSites', allSites, {path: '/', domain: '.aizhan.com'});
+	} else {
+		var allSitesA = allSites.split('|');
+		for (i = 0; i < allSitesA.length; i++) {
+			var tmpArr = allSitesA[i].split(',');
+			if (tmpArr.length == 2){
+				var tmpSite = tmpArr[0];
+				var tmpState = tmpArr[1];
+				lastSite = tmpSite;
+			} else if (tmpArr.length == 1){
+				lastSite = allSitesA[i];
+			}
+			break;
+		}
+		
+	}
+}
+if (!lastSite) {
+	lastSite = defaultSite;
+}
+$(document).ready(function(){
+	$("#site").val(lastSite);
+});
+String.prototype.trim = function() {
+	return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+String.prototype.ltrim = function() {
+	return this.replace(/(^\s*)/g, "");
+}
+String.prototype.rtrim = function() {
+	return this.replace(/(\s*$)/g, "");
+} 
+function doquery(qtype){
+	var query_domain = getdomain($("#site").val());
+	if(query_domain){
+		switch(qtype){
+			case "siteall":
+				location.href="http://www.aizhan.com/siteall/"+query_domain+"/";break;
+			case "baidu":
+				location.href="http://baidurank.aizhan.com/baidu/"+query_domain+"/position/";break;
+//				location.href="http://www.aizhan.com/baidu/?s="+query_domain+"&sortType=position";break;
+			case "linkche":
+				location.href="http://linkche.aizhan.com/?url="+query_domain;break;
+			case "link":
+				location.href="http://link.aizhan.com/?url="+query_domain+"&vt=a";break;
+			case "whois":
+				location.href="http://whois.aizhan.com/"+query_domain;break;
+			case "dns":
+				location.href="http://dns.aizhan.com/?q="+query_domain;break;
+			case "icp":
+				location.href="http://icp.aizhan.com/"+query_domain;break;
+			case "ping":
+				location.href="http://ping.aizhan.com/?q="+query_domain;break;
+			case "enter":
+				location.href="http://www.aizhan.com/siteall/"+query_domain+"/";
+				return false;break;
+		}
+	}else{
+		alert('请输入要查询的站点！');
+		$("#site").focus();
+		if(qtype=='enter'){return false;}
+	}
+}
+function getdomain(url) {
+	url = url.toLowerCase(); 
+	if(url.indexOf("http://") >= 0) {
+		url = url.replace("http://","");
+	}
+    if (url.indexOf("/") >= 0) {
+		var _domain_arr = url.split("/");
+		var _domain = _domain_arr[0];
+	} else {
+		var _domain = url;
+	}
+	_domain = _domain.trim();
+	_domain = _domain.replace(" ", "");
+	return _domain;
+}
+var page_l,page_r,page_t,page_b,page_w,page_h,page_cw,page_ch;
+function getpageinfo(){
+	page_l=$(document).scrollLeft();
+	page_t=$(document).scrollTop();
+	page_w=$(window).width();
+	page_h=$(window).height();
+	page_b=page_h+page_t;
+	page_r=page_w+page_l;
+	page_cw=Math.floor(page_w/2)+page_l;
+	page_ch=Math.floor(page_h/2)+page_t;
+}
+function show_weixin(){
+	getpageinfo();
+	$("#backlayer").css({"left":"0","top":"0","width":page_r+"px","height":$(document).height()+"px"}).show();
+	$("#weixin_div").css({"left":(page_cw-155)+"px","top":page_t+130+"px"}).show();
+}
+function hide_weixin(){
+	$("#weixin_div").hide();$("#backlayer").hide();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta name="keywords" content="whois,whois查询,whois信息查询,whois查询工具,whois实时查询,域名查询工具,域名注册信息查询" />
+<meta name="description" content="爱站网whois查询(whois.aizhan.com)提供最专业的whois信息查询站长工具站,最准确的域名whois信息查询，汉化版域名whois信息查询，支持域名Whois实时查询" />
+<title>a.com_whois信息_爱站网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="http://static.aizhan.com/favicon.ico" mce_href="http://static.aizhan.com/favicon.ico" type="image/x-icon" />
+    <link href="http://static.aizhan.com/css/css-2.6.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://static.aizhan.com/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="http://static.aizhan.com/js/jquery.cookie.js"></script>    
+    <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" charset="utf-8"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://static.aizhan.com/js/DD_belatedPNG.js"></script>
+    <script>
+      DD_belatedPNG.fix('.logo img,.t1,.goTop');
+    </script>
+    <![endif]-->
+</head>
+
+<body><script type="text/javascript" src="http://static.aizhan.com/js/history-1.2.js"></script>
+
+<div class="wrap" id="page">
+  <div class="header">
+  <div class="top">
+    <div class="r user">
+      <div id="user1" class="t1"></div>
+      <div id="user2" style="display:none">
+      <script type="text/javascript">
+	  if ($.cookie('userName')) {
+		  document.write('<div class="t2">欢迎您 <b>'+$.cookie('userName')+'</b> <a href="http://www.aizhan.com/user.php">用户中心</a> | <a href="http://www.aizhan.com/logout.php">退出</a></div>');
+	  } else {
+		  document.write('<div class="t2"><a href="http://www.aizhan.com/login.php">用户登录</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.aizhan.com/reg.php">快速注册</a></div>');
+	  }
+	  </script>
+      </div>
+    </div>
+    <div class="r word"><a href="http://www.aizhan.com/baidu/newword" class="white" target="_blank">提交新词</a></div>
+    <div class="r rss">
+      <div id="rss1" class="t1">订阅</div>
+      <div id="rss2" style="display:none">        
+        <div class="t2"><script type="text/javascript">document.write('<a title="百度站长工具" href="http://zhanzhang.baidu.com/dashboard/index" target="_blank" rel="nofollow">站长工具</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.aizhan.com/ie_baidu.html" target="_blank">右键查询</a>');</script></div>
+        <div class="t2"><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.aizhan.com/');" href="#" target=_self>设为首页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a title="加入收藏" href="javascript:window.external.AddFavorite('http://www.aizhan.com/', '爱站网')">收藏本站</a></div>
+        <div class="topweibo">
+          <wb:follow-button uid="1768367371" type="red_2" width="136" height="24" ></wb:follow-button>
+        </div>
+      </div>
+    </div>
+    <div class="logo"><a href="http://www.aizhan.com"><img src="http://static.aizhan.com/images/2013/logo.png" width="100" height="36" /></a></div>
+    <div id="nav" class="nav"> <a class="s0" href="http://www.aizhan.com" hidefocus="true">首 页</a> <a class="s1" hidefocus="true">SEO综合查询</a> <a class="s2 on" hidefocus="true">域名/IP类查询</a> <a class="s3" href="http://tools.aizhan.com" hidefocus="true">工具聚合</a> <a class="s4" href="http://weibo.feidalu.com" hidefocus="true" style="display:none">站长博客</a></div>
+  </div>
+  <div id="subnav"></div>
+</div>
+  <div class="zone1"> 
+	<script type="text/javascript" src="http://static.aizhan.com/jsa/a_a_t.js"></script> 
+  </div>
+  <div class="zone2"> 
+    <script type="text/javascript" src="http://static.aizhan.com/jsa/a_a_p.js"></script> 
+  </div>
+  <div class="content"> <div id="content">
+	
+<script type="text/javascript" src="http://static.aizhan.com/js/history-1.2.js"></script>
+<div class="path">
+    <form action="" method="get" name="query_form" style="padding-right:240px">
+  请输入你要查询的域名：
+  <div class="input_d">
+	<input type="text" name="domain" id="site" class="input_02" size="40" autocomplete="off"
+	onClick="DisplayAllSitesBox();" value="a.com" />
+	<span class="j_ico"><a onClick="DisplayAllSitesBox();"></a></span>
+	  <div id="allSitesBoxHdl" style="display:none" class="classlist">
+		<ul id="allSitesBox"></ul>
+	  </div>
+  </div>
+  <input type="button" class="btn02" onclick="updateData('false');" value="查  询">
+</form><script type="text/javascript">FillAllSites();</script>
+    <h2>域名whois查询</h2>
+</div>
+
+<div class="r_long_c">
+<div id="whoisContentHead" style="padding:10px 20px 0 20px;border-top:solid 1px #E5EFF8;">
+<?$whoisContent?>
+</div>
+<div id="whoisContentDetails" style="padding:0 20px 10px 20px;"><div class="total" style="border:none">请输入要查询的站点。</div></div>
+</div>
+<div class="gg01">最近查询：<a href="/"><span class="red"></span></a>
+
+	&nbsp;&nbsp;<a href="/yzhbj.gov.cn
+">yzhbj.gov.cn
+</a>
+	&nbsp;&nbsp;<a href="/lipanke.com
+">lipanke.com
+</a>
+	&nbsp;&nbsp;<a href="/ls.com.cn
+">ls.com.cn
+</a>
+	&nbsp;&nbsp;<a href="/skfzctj.com
+">skfzctj.com
+</a>
+	&nbsp;&nbsp;<a href="/baimuda.cc
+">baimuda.cc
+</a>
+	&nbsp;&nbsp;<a href="/hebkh.com
+">hebkh.com
+</a>
+</div>
+<div class="gg02">
+  <script type="text/javascript" src="http://static.aizhan.com/jsa/b_c.js"></script>
+</div>
+<div class="c"></div>
+<script type="text/javascript">
+function updateData(update) {
+	var inputDomain=$("input[name=domain]").val();
+	if(inputDomain != ''){
+		searchDomain = inputDomain;
+	}else{
+		searchDomain='';
+	}
+
+	$('#whoisContentHead').html('<img src="http://static.aizhan.com/images/loading16.gif" align="absmiddle" />正在获取域名<b>基本</b>信息，请稍等...');
+	$.ajax({
+	type:"get",
+	url:"/index.php?r=site/searchDomain",
+	cache:false,
+	data:{s:searchDomain,ajax:'yes',update:update,field:'base'},
+	success:
+	function(data){
+		if(data != 'error'){
+			$('#whoisContentHead').html(data);
+		}else{
+			$('#whoisContentHead').html('<span class="red">很抱歉！服务器繁忙,请稍候重试...</span>');
+		}
+	},
+	error:
+	function(data){
+		$('#whoisContentHead').html('<span class="red">很抱歉！服务器繁忙,请稍候重试...</span>');
+	}
+	});
+
+	$('#whoisContentDetails').html('<img src="http://static.aizhan.com/images/loading16.gif" align="absmiddle" />正在获取域名<b>详细</b>信息，请稍等...');
+	$.ajax({
+	type:"get",
+	url:"/index.php?r=site/searchDomain",
+	cache:false,
+	data:{s:searchDomain,ajax:'yes',update:update,field:'details'},
+	success:
+	function(data){
+		if(data != ''){
+			//$('#whoisContentDetails').html('___________详细信息__________</br>');
+			$('#whoisContentDetails').html('');
+			if(data != 'error'){
+			 $('#whoisContentDetails').append(data);
+			}else{
+			 $('#whoisContentDetails').append('<span class="red">很抱歉！服务器繁忙,请稍候重试...</span>');
+			}
+		}else{
+			$('#whoisContentDetails').html('');
+		}
+	},
+	error:
+	function(data){
+		//$('#whoisContentDetails').html('___________详细信息__________</br>');
+		$('#whoisContentDetails').html('');
+		$('#whoisContentDetails').append('<span class="red">很抱歉！服务器繁忙,请稍候重试...</span>');
+	}
+	});
+}
+updateData('false')</script>
+</div><!-- content -->
+ </div>
+  <div class="footer">
+    <div class="top">
+      <div class="r"><a href="http://www.aizhan.com/tag/">相关站点</a><a href="http://ping.aizhan.com/">PING检测</a><a href="http://dns.aizhan.com/">IP反查域名</a><a href="http://whois.aizhan.com/">whois查询</a><a class="last" href="http://whois.aizhan.com/reverse-whois/">whois反查</a>
+      </div>
+      <div class="l"><a class="first" href="http://www.aizhan.com/siteall/">综合查询</a><a href="http://baidurank.aizhan.com/baidu/">百度排名</a><a href="http://linkche.aizhan.com/">友链接测</a><a href="http://link.aizhan.com/">网站反链</a><a href="http://lishi.aizhan.com/">历史数据</a><a href="http://tools.aizhan.com/pk/">网站PK</a><a href="http://www.aizhan.com/webscan/">安全检测</a><a href="http://ci.aizhan.com/">关键词挖掘</a><a href="http://pr.aizhan.com/">PR值查询</a><a class="last" href="http://icp.aizhan.com/">备案查询</a>
+      </div>
+    </div>
+    <div class="bot">
+      <div class="r"><a class="first" rel="nofollow" href="http://www.aizhan.com/about.html">公司简介</a><a rel="nofollow" href="http://www.aizhan.com/contact.html">联系方法</a><a href="http://seo.aizhan.com" target="_blank" id="toseo">SEO培训</a><a rel="nofollow" href="http://www.aizhan.com/job.html">招聘信息</a><a rel="nofollow" href="http://www.aizhan.com/copyright.html">版权声明</a><a rel="nofollow" href="http://www.aizhan.com/ad.html">广告服务</a><a href="http://www.aizhan.com/flinks.html">友情链接</a><a rel="nofollow" href="http://www.aizhan.com/help.html">帮助中心</a><a class="last" rel="nofollow" href="http://post.aizhan.com/bug">意见反馈</a></div>
+      <div class="l"><span>&copy;</span>2009-2013 爱站网 版权所有  About Aizhan <a class="icp" rel="nofollow" href="http://www.miibeian.gov.cn">粤ICP备11096607号-15</a></div>
+    </div>
+    <script type="text/javascript" src="http://static.aizhan.com/js/home2013.js"></script> 
+  </div>
+</div>
+
+<!--回到顶部-->
+<div id="goTop" class="goTop"></div>
+<script type="text/javascript">
+$(window).scroll(function(){
+		 var sc=$(window).scrollTop();
+		 var rwidth=$(window).width()+$(document).scrollLeft();
+		 var rheight=$(window).height()+$(document).scrollTop();
+		  if(sc>0){
+			$("#goTop").css("display","block");
+			$("#goTop").css("left",(rwidth-80)+"px");
+			$("#goTop").css("top",(rheight-120)+"px");
+		  }else{
+			$("#goTop").css("display","none");
+		  }
+})
+		  
+$("#goTop").click(function(){
+		var sc=$(window).scrollTop();
+		$('body,html').animate({scrollTop:0},300);
+})		
+</script>
+
+</body>
+</html>

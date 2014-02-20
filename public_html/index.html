@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download and save any video from Youtube, Dailymotion, Metacafe, iFilm and more!</title>
+	<meta charset="utf-8">
+	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+	<meta name="google-site-verification" content="pEmsqaRddyXgmXlhRLdgGuNrS-2K4Iuorauk5FDIAzM" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Keywords" content="youcandown, download, direct, help, rip, copy, save, video, stream, youtube, yuotube, toutube, uoutube, houtube, ifilm, ofilm, ufilm, kfilm, irilm, metacafe, netacafe, ketacafe, jetacafe, meracafe, putfile, putfiel, outfile, lutfile, pitfile" />
+	<meta name="description" content="you can download online video, Download and save videos directly from Youtube, Google, Metacafe, Putfile and more. Simply copy and paste." />
+	<meta name="robots" content="All,index,follow"><meta name="revisit-after" content="7 days">
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet"  type="text/css" media="screen" href="/static/css/master.css" />
+</head>
+
+<body>
+<div class="c">
+<div class="b">
+<h1><a href="http://www.youcandown.com/" class="logo" title="youcandown.com can download videos from not only YouTube, but over 150 different services.">youcandown.com can download videos from not only YouTube, but over 150 different services.</a></h1>
+<a href="javascript:(a%20=%20(b%20=%20document).createElement('script')).src%20=%20'http://www.youcandown.com/static/js/bm.js',%20b.body.appendChild(a);void(0);" title="YouCanDown!" class="bm">YouCanDown!</a>
+</div>
+<div class="d">
+<form method="get" action="/">
+<input type="submit" value="DOWNLOAD" class="f" />
+<script type="text/javascript">var d=document;</script>
+<div class="g"><input type="text" name="url" id="url" class="e" value="" placeholder="enter the link of the video you want to download: e.g http://vimeo.com/47337258" /></div>
+<script type="text/javascript">
+if (parent.frames.length > 0) {window.top.location.href = location.href;};
+var d=document;
+function $(id){return d.getElementById(id)}
+function getQueryString(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+var r = window.location.search.substr(1).match(reg);
+if (r != null) return unescape(r[2]); return null;
+}
+var cc='';
+var colors={
+	"3GP": "2EADC9",
+	"FLV": "BF6D1B",
+	"MP4": "436DBA",
+	"WEBM": "52B27F",
+	"M4A": "87273A",
+	"MP3": "AF43B5",
+	"SRT": "B74B4B"
+};
+var b = $('url');
+var url = getQueryString("url");
+if (url !== null){b.value = url;}
+b.onfocus=function(){b.value='';};b.onblur=function(){if(b.value=='')b.value=url;};
+</script>
+</form>
+<div class="ada"></div>
+youcandown.com can download videos from not only YouTube, but over 150 different services. For a complete list, see the <a href="/faq">FAQ</a> pages.
+<div class="adc"></div>
+<div class="h">
+<div id="nl"><img src="/static/images/ajax-loader.gif" class="ld" /> Fetching links...</div>
+<div id="dl">
+</div>
+</div>
+</div>
+<div class="fo">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/faq">FAQ</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</div>
+</div>
+<div class="s" style="display:none;">
+	
+</div>
+<script type="text/javascript">
+var Ajax={};
+var i;
+Ajax._xmlHttp = function(){ return(window.ActiveXObject) ? new ActiveXObject("Microsoft.XMLHTTP") : (XMLHttpRequest && new XMLHttpRequest()) || null};
+Ajax._xmlHttp.abort = function(){
+	if (url !== null) {
+		$('dl').innerHTML = "Error: Fetching timeout !";
+		$("nl").style.display = "none";
+	}
+}
+Ajax._timeout = window.setTimeout(function () {
+	Ajax._xmlHttp.abort();
+}, 5000);
+
+Ajax._AddEventToXHP = function(xhp,fun){
+    xhp.onreadystatechange=function(){
+        if(xhp.readyState==4&&xhp.status==200) {
+			clearTimeout(Ajax._timeout);
+            fun(xhp.responseText);
+		}
+    }    
+}
+Ajax.get=function(url,fun,bool){
+    var _xhp = this._xmlHttp();    
+    this._AddEventToXHP(_xhp, fun || function(){});
+    _xhp.open("GET",url,bool);
+    _xhp.send(null);    
+}
+//console.log(url);
+if (url !== null) {
+	$("nl").style.display = "block";
+	Ajax.get("/json?url=" + url,function(v){
+		eval('var data = ' + v + ';');
+		if(data.status) {
+			eval('var result = [' + data.data.replace(/}/g,"},") + '];');
+			
+			i=0;
+			document.title = "Download: " + result[i]._filename;
+			var sr = '<div class="j" id="info"><a href="'+result[i].webpage_url+'" class="n" target="_blank" rel="nofollow">'+result[i].fulltitle+'</a><br /><span class="p">'+result[i].webpage_url+'</span><br /></div>';
+			imgsrc = "/l?t="+result[i].fulltitle+"&u="+url+"&e="+result[i].extractor;
+			for( i = 0; i < result.length; i++) {
+				if(colors[(result[i].ext+'').toUpperCase()]!="") cc=' style="color:#'+colors[(result[i].ext+'').toUpperCase()]+';"';
+				sr += '<a href="'+result[i].url+'" class="l" '+cc+'>&raquo; '+ result[i]._filename +' &laquo;</a><br />';
+			}
+			$('dl').innerHTML = sr;
+			(new Image).src = imgsrc + "&s=" + Math.random()
+		}else{
+			$('dl').innerHTML = data.data;
+		}
+		$("nl").style.display = "none";
+	});
+}
+</script>
+</body>
+</html>
